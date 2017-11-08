@@ -1,4 +1,4 @@
-const thing = require('./thing.js');
+const Random = require('./Random.js');
 
 const Manager = function(){
 let id = "w-"+Random().digit(8);
@@ -7,13 +7,13 @@ let baseSalary = Random().discreteRangeIn(4,9)*10000;
 function pay(){
     let dailyPay = (hours/5)*wage;
     let weeklyPay = hours*wage;
-    let yearlyPay = weeklyPay*52;
+    let yearlyPay = baseSalary();
     let payArray = [dailyPay,weeklyPay,yearlyPay];
     if(workers <= 10){
         yearlyPay += workers*250;
     }
     else{
-        for(let x = 0;x<10;)
+        yearlyPay += 2500 + (workers-10)*400;
     }
     return payArray;
 
