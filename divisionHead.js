@@ -14,6 +14,6 @@ function pay(){
     yearlyPay += (workers*50)/(Math.log(50*workers));
     return payArray;
 
-};
-
+    };
+}
 module.exports = DivisionHead;

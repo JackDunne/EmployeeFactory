@@ -25,3 +25,8 @@ const employeeFactory = function(type){
 };
 
 module.exports = employeeFactory;
+function main(){
+    create(Worker);
+    create(Manager);
+    create(DivisionHead);
+}

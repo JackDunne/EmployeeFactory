@@ -17,6 +17,7 @@ function pay(){
     }
     return payArray;
 
-};
+    };
+}
 
 module.exports = Manager;
